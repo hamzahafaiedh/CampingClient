@@ -26,8 +26,8 @@ const SignIn = async (req, res) => {
     else{
     try {
         const user = await User.findOne({ email: email });
-        const passwordMatches = await bcrypt.compare(password, user.password);
         if (user) {
+            const passwordMatches = await bcrypt.compare(password, user.password);
             if ( passwordMatches) {
                 const token1 = createToken(user._id);
                     // Update the user's token and get the updated document
@@ -40,11 +40,11 @@ const SignIn = async (req, res) => {
                     res.status(200).json(updatedUser);
             }
             else {
-                res.status(500).json("check your password");
+                res.status(400).json("check your password");
             }
         }
         else {
-            res.status(500).json("this email does not exist");
+            res.status(400).json("this email does not exist");
         }
     } catch (err) {
         res.status(500).json(err.message);
