@@ -123,7 +123,7 @@ const SignUpPage = () => {
                                 )}
                                 {errors?.phoneNumber?.type === "minLength" && (
                                     <div className="alert alert-danger alert-dismissible fade show my-1 py-1 d-flex align-items-center" role="alert"  style={{ width: "215px" }}>
-                                        <p className="mb-0">Phone number must be 8 numbers!</p>
+                                        <p className="mb-0">Phone number must be at least 8 numbers!</p>
                                     </div>
                                 )}
                             </div>
