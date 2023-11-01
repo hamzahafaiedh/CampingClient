@@ -52,6 +52,10 @@ function ListOffrePlat() {
             <div className={`container  ${style.AddResContainer}`}>
                 <div className={style.AddResContent}>
                     <h1 className={style.welcomeText}>List of meals</h1>
+                    <button className={`${style.AddResButton} ${style.UpdateButton}`} 
+                                         onClick={() => {
+                                            navigate(`/AddOffrePlat`);                                             
+                                        }}>Add new meal</button>
                     <div className=' pt-4'></div>
                     <table className="table mb-4 text-white" style={{ "--bs-table-color": "initial", "--bs-table-bg": "initial" }}>
                         <thead>
