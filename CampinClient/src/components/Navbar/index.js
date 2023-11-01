@@ -46,9 +46,9 @@ const Navbar = ({ toggle }) => {
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to="about" 
+                            <NavLinksHamza to='ListPrograms'
                                 smooth = {true} duration = {500} spy = {true}
-                                exact = 'true' offset = {-80} >Programs</NavLinks>
+                                exact = 'true' offset = {-80}>Programs</NavLinksHamza>
                             </NavItem>
                             <NavItem>
                                 <NavLinks to="discover"
