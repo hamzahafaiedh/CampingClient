@@ -17,6 +17,7 @@ const LoginScreen = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
 
     const signin=()=>{
@@ -27,9 +28,14 @@ const LoginScreen = () => {
             password: password,}).then((response)=>{
                 console.log(response.data)
                 Cookies.set("jwt", response.data.token);
-navigate('/');
-            })
-          
+navigate('/')
+            }).catch((Error) => {
+                if (Error.response && Error.response.data) {
+                    setError(Error.response.data); // Set the error message from the server
+                } else {
+                    setError("Please verify your email and password"); // Set a generic error message
+                }
+            });
     }
 
     return (
@@ -52,6 +58,11 @@ navigate('/');
                <p className="mb-0">Password is required!</p>
              </div>
               )}
+              {error && (
+                        <div className="alert alert-danger alert-dismissible fade show my-1 py-1 d-flex align-items-center" role="alert">
+                        <p className="mb-0">{error}</p>
+                      </div>
+                    )}
              
                         <button type='submit' className={style.loginButton}>Login</button>
                     </form>

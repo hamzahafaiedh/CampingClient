@@ -26,7 +26,7 @@ const sendSms = async (phone) => {
             to: `${phone}`
         }).then(res.json(console.log(code)))
     } catch (error) {
-        res.status(500).json(error.message);
+        console.log(error);
     }
 }
 

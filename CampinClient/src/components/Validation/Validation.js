@@ -17,5 +17,5 @@ export const validation = {
     dateOfBirth: { required: true },
     address: { required: true },
     userName: { required: true},
-    phoneNumber: { required: true , Length: 8 },
+    phoneNumber: { required: true , minLength: 8 },
   };

@@ -8,6 +8,7 @@ import ListReservations from './pages/Reservation/ListReservations';
 import AddOffrePlat from './pages/OffrePlat/AddOffrePlat';
 import ListOffrePlat from './pages/OffrePlat/ListOffrePlat'
 import UpdateOffrePlat from './pages/OffrePlat/UpdateOffrePlat'
+import UpdateReservation from './pages/Reservation/UpdateReservation';
 import AddCamping from './pages/Camping/AddCamping';
 import ListCamping from './pages/Camping/ListCamping';
 import UpdateCamping from './pages/Camping/UpdateCamping';
@@ -27,6 +28,7 @@ function App() {
       <Route path='/AddOffrePlat' element={<AddOffrePlat></AddOffrePlat>} ></Route>
       <Route path='/ListOffrePlat' element={<ListOffrePlat></ListOffrePlat>} ></Route>
       <Route path='/UpdateOffrePlat/:id' element={<UpdateOffrePlat></UpdateOffrePlat>} ></Route>
+      <Route path='/UpdateReservation/:id' element={<UpdateReservation></UpdateReservation>} ></Route>
       <Route path='/UpdateCamping/:campingId' element={<UpdateCamping></UpdateCamping>} ></Route>
       
     </Routes> 
