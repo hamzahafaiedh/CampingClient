@@ -46,24 +46,29 @@ const Navbar = ({ toggle }) => {
                         </MobileIcon>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to="about" 
+                                <NavLinksHamza to="/ListPrograms" 
                                 smooth = {true} duration = {500} spy = {true}
-                                exact = 'true' offset = {-80} >Programs</NavLinks>
+                                exact = 'true' offset = {-80} >Programs</NavLinksHamza>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="discover"
+                                <NavLinksHamza to="/ListOffrePlat"
                                 smooth = {true} duration = {500} spy = {true}
-                                exact = 'true' offset = {-80}>Meals</NavLinks>
+                                exact = 'true' offset = {-80}>Meals</NavLinksHamza>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="facility"
+                                <NavLinksHamza to="/camping"
                                 smooth = {true} duration = {500} spy = {true}
-                                exact = 'true' offset = {-80}>Campings</NavLinks>
+                                exact = 'true' offset = {-80}>Campings</NavLinksHamza>
                             </NavItem>
                             <NavItem>
-                                <NavLinksHamza to='/ListReservations'
+                                <NavLinksHamza to=''
                                 smooth = {true} duration = {500} spy = {true}
                                 exact = 'true' offset = {-80}>Reservations</NavLinksHamza>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinksHamza to='/ListAvis'
+                                smooth = {true} duration = {500} spy = {true}
+                                exact = 'true' offset = {-80}>Reviews</NavLinksHamza>
                             </NavItem>
 
                         </NavMenu>
