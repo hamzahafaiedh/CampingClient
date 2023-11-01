@@ -53,7 +53,7 @@ function AddProgram() {
                             <input type="text" name='precautions' placeholder="Precautions" className={style.inputField} onChange={(e) => setPrecautions(e.target.value)} />
                             <div className='d-flex '>
                             <button type="button" className={`${style.AddResButton} ${style.CancelButton}`}>Cancel</button>
-                            <button type="submit" className={style.AddResButton}>Add reservation</button>
+                            <button type="submit" className={style.AddResButton}>Add Program</button>
                             </div>
                         </form>
                     </div>

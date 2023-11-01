@@ -7,6 +7,7 @@ import AddReservation from './pages/Reservation/AddReserVation';
 import ListReservations from './pages/Reservation/ListReservations';
 import AddProgram from './pages/Program/AddProgram';
 import ListPrograms from './pages/Program/ListPrograms';
+import UpdateProgram from './pages/Program/UpdateProgram';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/ListReservations' element={<ListReservations></ListReservations>} ></Route>
       <Route path='/AddProgram' element={<AddProgram></AddProgram>} ></Route>
       <Route path='/ListPrograms' element={<ListPrograms></ListPrograms>} ></Route>
+      <Route path='/UpdateProgram/:id' element={<UpdateProgram></UpdateProgram>} ></Route>
       
     </Routes> 
   

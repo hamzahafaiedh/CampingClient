@@ -78,7 +78,7 @@ function ListProgram() {
                                         <button onClick={() => handleDelete(program.id)} className={`${style.AddResButton} ${style.CancelButton}`}>Delete</button>
                                     </td>
                                     <td>
-                                        <button className={`${style.AddResButton} ${style.UpdateButton}`}>Update</button>
+                                    <button className={`${style.AddResButton} ${style.UpdateButton}`} onClick={()=>{navigate(`/UpdateProgram/${program.id}`)}}>Update</button>
                                     </td>
                                 </tr>
                             ))}
