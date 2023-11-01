@@ -46,7 +46,9 @@ function ListProgram() {
             <div className={style.overlay}></div>
         </div>
         <div className={`container  ${style.AddResContainer}`}> 
-        <button className={`${style.AddResButton} ${style.UpdateButton}`}> <a href="/AddProgram">ADD</a></button>
+        {/* <button className={`${style.AddResButton} ${style.UpdateButton}`}> <a href="/AddProgram">ADD</a></button> */}
+        <button className={`${style.AddResButton} ${style.UpdateButton}`} onClick={()=>{navigate(`/AddProgram`)}}>ADD</button>
+
 
             <div className={style.AddResContent}>
            
