@@ -29,6 +29,7 @@ const LoginScreen = () => {
                 Cookies.set("jwt", response.data.token);
 navigate('/');
             })
+          
     }
 
     return (

@@ -10,8 +10,11 @@ import {
     TopLine,
 } from './CampingElements';
 import Car from '../../images/home1.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const InfoSection = ({ lightBg, id, alt }) => {
+    const navigate=useNavigate();
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
@@ -21,7 +24,9 @@ const InfoSection = ({ lightBg, id, alt }) => {
                     <TopLine>Campings</TopLine>
                         <Heading>There are new campings for you!</Heading>
                         <Subtitle>Check our list now.</Subtitle>
-                        <Button>View List</Button>
+                        <Button to="/Campings">View List</Button>
+                        <Subtitle>Or Create your own Camping .</Subtitle>
+                        <Button  to="/AddCamping">Add Camping</Button>
                     </TextOverlay>
                 </ImgWrap>
             </InfoContainer>
