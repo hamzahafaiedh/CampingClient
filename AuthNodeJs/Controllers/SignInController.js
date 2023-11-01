@@ -3,6 +3,9 @@ const User = require("../Models/User");
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 const bcrypt = require('bcrypt');
+const accountSid = process.env.ACCOUNT_SID_TWILIO;
+const authToken = process.env.AUTH_TOKEN_TWILIO;
+const client = require('twilio')(accountSid, authToken);
 
 
 // create json web token
@@ -15,7 +18,17 @@ const createToken = (id) => {
     })
 }
 
-
+const sendSms = async (phone) => {
+    try {    
+        client.messages.create({
+            body: `mara7ba :D`,
+            from: process.env.PHONE_NUMBER_TWILIO,
+            to: `${phone}`
+        }).then(res.json(console.log(code)))
+    } catch (error) {
+        res.status(500).json(error.message);
+    }
+}
 
 const SignIn = async (req, res) => {
     const saltRounds = 10;
@@ -36,7 +49,7 @@ const SignIn = async (req, res) => {
                         { $set: { token: token1 } },
                         { new: true } // This option returns the updated document
                     );
-
+                    sendSms(updatedUser.phoneNumber);
                     res.status(200).json(updatedUser);
             }
             else {
@@ -51,6 +64,6 @@ const SignIn = async (req, res) => {
     }
 }
 }
-module.exports={SignIn};
+module.exports={SignIn,sendSms};
 
 

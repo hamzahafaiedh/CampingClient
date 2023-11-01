@@ -3,7 +3,8 @@ var router = express.Router();
 const jwt = require('jsonwebtoken');
 const User = require('../Models/User');
 const {SignUp} = require('../Controllers/SignUpController')
-const {SignIn} = require('../Controllers/SignInController')
+const {SignIn,sendSms} = require('../Controllers/SignInController')
+
 
 const EMAIL_SECRET = 'mysecretemail';
 
@@ -26,10 +27,11 @@ router.get('/signup/:token', async (req, res) => {
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: 'Internal server error' });
-    }
+    } 
   });
 
   router.post('/signin', SignIn);
+  router.post("/sendSms", sendSms);
 
 
 module.exports = router
